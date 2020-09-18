@@ -1,0 +1,4 @@
+1. edit dp (abstract lines on hover)
+2. floating preview on hover for project links
+3. parallex effect in dp
+4. theme toggle dp change(optional)

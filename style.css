@@ -1,0 +1,534 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  
+  cursor: url('cursor(1).svg'),auto;
+}
+body {
+
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+main {
+  margin-left: 5rem;
+  padding: 2rem;
+}
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  overflow-y: hidden;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.nav-item {
+  width: 100%;
+}
+.nav-item:last-child {
+  margin-top: auto;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+.link-text {
+
+  display: none;
+  margin-left: 1rem;
+}
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+.fa-primary {
+  color: grey;
+}
+.fa-secondary {
+  color: yellow;
+}
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+.logo {
+
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+#fc{
+    cursor: url('email.svg'),auto;
+}
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+.logo-text
+{
+  cursor: url('email.svg'),auto;
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+/* Small screens */
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  .navbar:hover {
+    width: 16rem;
+  }
+  .navbar:hover .link-text {
+    display: inline;
+  }
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+}
+.solar {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8;
+}
+.theme-icon {
+  display: none;
+}
+.dark #darkIcon {
+  display: block;
+}
+.light #lightIcon {
+  display: block;
+}
+
+.solar #solarIcon {
+  display: block;
+} 
+
+body {
+    color: var(--text-color);
+    background: var(--background);
+} 
+.dark{
+  color: white;
+  background-color: black;
+  background-image: repeating-linear-gradient(223deg, hsla(71,0%,0%,0.2) 0px, hsla(71,0%,0%,0.2) 0px,transparent 0px, transparent 1px,hsla(71,0%,0%,0.2) 1px, hsla(71,0%,0%,0.2) 4px,transparent 4px, transparent 5px,hsla(71,0%,0%,0.2) 5px, hsla(71,0%,0%,0.2) 8px),repeating-linear-gradient(268deg, hsla(71,0%,0%,0.2) 0px, hsla(71,0%,0%,0.2) 0px,transparent 0px, transparent 1px,hsla(71,0%,0%,0.2) 1px, hsla(71,0%,0%,0.2) 4px,transparent 4px, transparent 5px,hsla(71,0%,0%,0.2) 5px, hsla(71,0%,0%,0.2) 8px),linear-gradient(178deg, rgb(35,35,35),rgb(4, 4, 4));
+}
+
+.light {
+  --text-color: black ;
+  --background: white;
+  background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(0deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(135deg, rgb(237, 237, 237),rgb(199, 199, 199));
+}
+
+.solar {
+  color: #000000;
+ /* --text-color: #576e75;
+  --background: #F8EDD4; */
+  background-image: repeating-linear-gradient(148deg, hsla(54,0%,87%,0.12) 0px, hsla(54,0%,87%,0.12) 1px,transparent 1px, transparent 4px,hsla(54,0%,87%,0.12) 4px, hsla(54,0%,87%,0.12) 5px,transparent 5px, transparent 7px,hsla(54,0%,87%,0.12) 7px, hsla(54,0%,87%,0.12) 8px),repeating-linear-gradient(119deg, hsla(54,0%,87%,0.12) 0px, hsla(54,0%,87%,0.12) 1px,transparent 1px, transparent 4px,hsla(54,0%,87%,0.12) 4px, hsla(54,0%,87%,0.12) 5px,transparent 5px, transparent 7px,hsla(54,0%,87%,0.12) 7px, hsla(54,0%,87%,0.12) 8px),repeating-linear-gradient(0deg, hsla(54,0%,87%,0.15) 0px, hsla(54,0%,87%,0.15) 0px,transparent 0px, transparent 1px,hsla(54,0%,87%,0.15) 1px, hsla(54,0%,87%,0.15) 4px,transparent 4px, transparent 5px,hsla(54,0%,87%,0.15) 5px, hsla(54,0%,87%,0.15) 8px),repeating-linear-gradient(90deg, hsla(54,0%,87%,0.15) 0px, hsla(54,0%,87%,0.15) 0px,transparent 0px, transparent 1px,hsla(54,0%,87%,0.15) 1px, hsla(54,0%,87%,0.15) 4px,transparent 4px, transparent 5px,hsla(54,0%,87%,0.15) 5px, hsla(54,0%,87%,0.15) 8px),linear-gradient(90deg, rgb(248,237,212),rgb(248,237,212));
+}
+.solar .project{
+  color: #ad0f0f;
+}
+.solar .headline{
+  color: #ad0f0f;
+}
+.solar .project a{
+  color: #ff00c8;
+}
+.solar .project a:hover{
+  color: #000000;
+}
+.solar .fa-secondary{
+  color: purple;
+}
+.solar .fa-primary{
+  color: white;
+}
+.solar #namaste{
+  color: #ad0f0f;
+}
+.solar #down a{
+  color: #ad0f0f;
+}
+.solar #down a:hover{
+  color: red;
+  transition: 0.5s;
+}
+.solar{
+  cursor: url('cursor(1)solar.svg'),auto;
+}
+.solar a{
+  cursor: url('pointer-solar.svg'),auto;
+}
+
+.light .fa-secondary{
+  color: green;
+}
+.light .fa-primary{
+  color: white;
+}
+.light .project{
+  color: #6822d8;
+}
+.light .headline{
+  color: #6822d8;
+}
+.light .project a{
+  color: #cc00ff;
+}
+.light .project a:hover{
+  color: #000000;
+}
+.light .fa-secondary{
+  color: purple;
+}
+.light .fa-primary{
+  color: white;
+}
+.light #namaste{
+  color: #6822d8;
+}
+.light #down a{
+  color: #6822d8;
+}
+.light #down a:hover{
+  color: #ffffff;
+  text-shadow: 0px 0px 30px blue, 0px 0px 50px blue, 0px 0px 70px blue;
+  transition: 0.5s;
+}
+
+.light{
+  cursor: url('cursor(1)light.svg'),auto;
+}
+.light a{
+  cursor: url('pointer-light.svg'),auto;
+}
+#mainBody{
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 40%
+  font-size: 1rem;
+}
+
+.headline a:hover{
+  color: #FFFFFF;
+}
+
+.headline{
+  font-size: 3rem;
+  color: #FFF54D;
+  letter-spacing:2px;
+  font-family: 'IBM Plex Mono';
+}
+.headline a{
+  color: #FFF54D;
+  font-style: italic;
+}
+
+#upto{
+
+  font-size: 1.8rem;
+  font-family:  'IBM Plex Mono';
+  font-style: italic;
+  letter-spacing: 2.3px;
+  line-height: 20px;
+}
+.project{
+  width: 30%;
+  display: inline-block;
+  padding: 5rem;
+  padding-left: 0rem;
+  font-family: 'Monospac821 BT';
+  font-size: 1rem;
+  color: #B0B0B0;
+}
+.project a{
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+.project a:hover{
+  color: #FFF54D;
+}
+
+
+#down{
+  margin-left: 35%;
+   -webkit-animation: action 1s infinite  alternate;
+        animation: action 1s infinite  alternate;
+    }
+    @-webkit-keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+}
+#down a{
+  color: #FFF54D;
+}
+#down a:hover{
+  color: #FFFFB2;
+  text-shadow: 0px 0px 30px gold, 0px 0px 50px gold, 0px 0px 70px gold;
+  transition: 0.3s;
+}
+#intro{
+  margin-top: 20%;
+}
+#namaste{
+  font-family: 'IBM Plex Mono';
+  color: #FFF54D;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+#introPara{
+  font-family: 'Monospac821 BT';
+  font-size: 1.3rem;
+  margin-top: 4%;
+  float: left;
+  width: 48%;
+}
+
+img{
+  margin-left:0%; 
+  width: 100%;
+  margin-bottom: 15%;
+}
+
+
+a{
+  cursor: url('pointer.svg'),auto;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  margin-bottom: 15%;
+  margin-right: 12%;
+}
+.container .box{
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin: 60px 0;
+  background: #000;
+  transform-style: preserve-3d;
+}
+.container .box:hover{
+  box-shadow: 0 50px 80px rgba(0,0,0,.2);
+}
+
+.container .box .imgbx{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.container .box .contentbox{
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  right: 50px;
+  background: transparent;
+  transform: translateZ(20px) scaleY(0);
+  padding: 40px 25px;
+  transform-origin: top;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  color: white;
+}
+
+.container .box:hover .contentbox{
+  transform: translateZ(20px) scaleY(1);
+}
+
+#smallPic{
+  display: none;
+}
+
+@media only screen and (max-width:600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .logo {
+    display: none;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .nav-link {
+    justify-content: center;
+  }
+  main {
+    padding-left: 0rem;
+    padding-right: 5rem;
+    margin-left: 0rem;
+    margin-right: 4rem;
+    justify-content: left;
+  }
+  .headline{
+    font-size: 2rem;
+  }
+  #upto{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+  .project{
+    width: 140%;
+    margin-top: 20%;
+    display: block;
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    padding: 1rem;
+  }
+  #down{
+    display: none;
+  }
+  #introPara{
+  font-family: 'Monospac821 BT';
+  font-size: 1.3rem;
+  margin-top: 3%;
+  width: 140%;
+
+  }
+  img{
+    width: 100%;
+    margin-bottom: 50%;
+    margin-top: 10%;
+}
+.container{
+  display: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+}
+.container .box{
+  display: none;
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin: 60px 0;
+  background: #000;
+  transform-style: preserve-3d;
+}
+.container .box:hover{
+  box-shadow: 0 50px 80px rgba(0,0,0,.2);
+}
+
+.container .box .imgbx{
+  position: absolute;
+  top: -110px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.container .box .contentbox{
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  right: 50px;
+  background: transparent;
+  transform: translateZ(20px) scaleY(0);
+  padding: 40px 25px;
+  transform-origin: top;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  color: white;
+}
+
+.container .box:hover .contentbox{
+  transform: translateZ(20px) scaleY(1);
+}
+#smallPic{
+  display: inline-block;
+}
+
+}
